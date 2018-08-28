@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29AF7A362135B69E00903F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AF7A352135B69E00903F87 /* AppDelegate.swift */; };
+		29AF7A382135B69E00903F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AF7A372135B69E00903F87 /* ViewController.swift */; };
+		29AF7A3A2135B69F00903F87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29AF7A392135B69F00903F87 /* Assets.xcassets */; };
+		29AF7A3D2135B69F00903F87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29AF7A3B2135B69F00903F87 /* Main.storyboard */; };
+		29AF7A462135C77600903F87 /* cmd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AF7A452135C77600903F87 /* cmd.swift */; };
+		29AF7A482135C79000903F87 /* ZApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AF7A472135C79000903F87 /* ZApp.swift */; };
+		29B410D22135E9E80041ACCE /* Repeat.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 29B410CF2135E98A0041ACCE /* Repeat.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		29B410D12135E9D60041ACCE /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				29B410D22135E9E80041ACCE /* Repeat.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		29AF7A322135B69E00903F87 /* ztop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ztop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		29AF7A352135B69E00903F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		29AF7A372135B69E00903F87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		29AF7A392135B69F00903F87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		29AF7A3C2135B69F00903F87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		29AF7A3E2135B69F00903F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29AF7A3F2135B69F00903F87 /* ztop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ztop.entitlements; sourceTree = "<group>"; };
+		29AF7A452135C77600903F87 /* cmd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cmd.swift; sourceTree = "<group>"; };
+		29AF7A472135C79000903F87 /* ZApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZApp.swift; sourceTree = "<group>"; };
+		29B410CF2135E98A0041ACCE /* Repeat.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Repeat.framework; path = Carthage/Build/Mac/Repeat.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29AF7A2F2135B69E00903F87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29AF7A292135B69E00903F87 = {
+			isa = PBXGroup;
+			children = (
+				29AF7A342135B69E00903F87 /* ztop */,
+				29AF7A332135B69E00903F87 /* Products */,
+				5F5B7F9375B276676229DCF6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		29AF7A332135B69E00903F87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29AF7A322135B69E00903F87 /* ztop.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29AF7A342135B69E00903F87 /* ztop */ = {
+			isa = PBXGroup;
+			children = (
+				29AF7A352135B69E00903F87 /* AppDelegate.swift */,
+				29AF7A372135B69E00903F87 /* ViewController.swift */,
+				29AF7A472135C79000903F87 /* ZApp.swift */,
+				29AF7A452135C77600903F87 /* cmd.swift */,
+				29AF7A392135B69F00903F87 /* Assets.xcassets */,
+				29AF7A3B2135B69F00903F87 /* Main.storyboard */,
+				29AF7A3E2135B69F00903F87 /* Info.plist */,
+				29AF7A3F2135B69F00903F87 /* ztop.entitlements */,
+			);
+			path = ztop;
+			sourceTree = "<group>";
+		};
+		5F5B7F9375B276676229DCF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B410CF2135E98A0041ACCE /* Repeat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		29AF7A312135B69E00903F87 /* ztop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 29AF7A422135B69F00903F87 /* Build configuration list for PBXNativeTarget "ztop" */;
+			buildPhases = (
+				29AF7A2E2135B69E00903F87 /* Sources */,
+				29AF7A2F2135B69E00903F87 /* Frameworks */,
+				29AF7A302135B69E00903F87 /* Resources */,
+				29B410D12135E9D60041ACCE /* CopyFiles */,
+				298ED1C82135EA500077AA8C /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ztop;
+			productName = ztop;
+			productReference = 29AF7A322135B69E00903F87 /* ztop.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29AF7A2A2135B69E00903F87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = oneleif;
+				TargetAttributes = {
+					29AF7A312135B69E00903F87 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = 29AF7A2D2135B69E00903F87 /* Build configuration list for PBXProject "ztop" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 29AF7A292135B69E00903F87;
+			productRefGroup = 29AF7A332135B69E00903F87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				29AF7A312135B69E00903F87 /* ztop */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		29AF7A302135B69E00903F87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29AF7A3A2135B69F00903F87 /* Assets.xcassets in Resources */,
+				29AF7A3D2135B69F00903F87 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		298ED1C82135EA500077AA8C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Repeat.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		29AF7A2E2135B69E00903F87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29AF7A482135C79000903F87 /* ZApp.swift in Sources */,
+				29AF7A462135C77600903F87 /* cmd.swift in Sources */,
+				29AF7A382135B69E00903F87 /* ViewController.swift in Sources */,
+				29AF7A362135B69E00903F87 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		29AF7A3B2135B69F00903F87 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29AF7A3C2135B69F00903F87 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		29AF7A402135B69F00903F87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		29AF7A432135B69F00903F87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ztop/ztop.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 8M8SAX62V2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = ztop/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ol.leif.ztop;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		29AF7A2D2135B69E00903F87 /* Build configuration list for PBXProject "ztop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29AF7A402135B69F00903F87 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		29AF7A422135B69F00903F87 /* Build configuration list for PBXNativeTarget "ztop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				29AF7A432135B69F00903F87 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29AF7A2A2135B69E00903F87 /* Project object */;
+}
