@@ -33,5 +33,5 @@ func get(app: NSRunningApplication) -> ZApp? {
         let formattedMEM = Double(mem.replacingOccurrences(of: "%MEM", with: "").trimmingCharacters(in: .whitespacesAndNewlines)) else {
             return nil
     }
-    return ZApp(name: name, p_id: p_id, cpu: formattedCPU, mem: formattedMEM, isPinned: false, limit: 0)
+    return ZApp(name: name, p_id: p_id, cpu: formattedCPU, mem: formattedMEM, tick: 0, isPinned: false, limit: 0)
 }

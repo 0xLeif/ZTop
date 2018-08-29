@@ -15,7 +15,7 @@ class ViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var limitedTableView: NSTableView!
     @IBOutlet weak var limitedView: NSScrollView!
-    
+    fileprivate var globalTick: Int = 0
     fileprivate var selectedApp: ZApp? = nil {
         didSet {
             DispatchQueue.main.async {
@@ -46,9 +46,12 @@ class ViewController: NSViewController {
             apps = allApps.values.filter({ (app) -> Bool in
                 !app.isPinned
             })
-            limitedApps = allApps.values.filter({ (app) -> Bool in
+                .sorted { $0.cpu > $1.cpu }
+            limitedApps = allApps.values
+                .filter { (app) -> Bool in
                 app.isPinned
-            })
+            }
+                .sorted { $0.cpu > $1.cpu }
         }
     }
 
@@ -57,7 +60,7 @@ class ViewController: NSViewController {
         loadApps()
         limitedApps = []
         linkTableViews()
-        timer = Repeater.every(.milliseconds(500)) { (r) in
+        timer = Repeater.every(.seconds(1)) { (r) in
             self.updateApps()
         }
     }
@@ -80,10 +83,12 @@ class ViewController: NSViewController {
             .sorted { $0.cpu > $1.cpu }
         apps.forEach { (app) in
             allApps["\(app.p_id)"] = app
+            allApps["\(app.p_id)"]?.tick = globalTick
         }
     }
     
     fileprivate func updateApps() {
+        globalTick += 1
         NSWorkspace.shared.runningApplications
             .filter { $0.localizedName != "ztop" }
             .compactMap { get(app: $0) }
@@ -91,10 +96,15 @@ class ViewController: NSViewController {
                 if let oldApp = allApps["\(app.p_id)"] {
                     allApps["\(app.p_id)"] = app
                     allApps["\(app.p_id)"]?.limit(percent: oldApp.limit)
+                    
                 } else {
                     allApps["\(app.p_id)"] = app
                 }
+                allApps["\(app.p_id)"]?.tick = globalTick
         }
+        allApps.values
+            .filter { $0.tick != globalTick }
+            .forEach { allApps["\($0.p_id)"] = nil }
     }
         
     @objc
@@ -129,10 +139,12 @@ extension ViewController: NSTableViewDelegate,
                 return nil
             }
             var text: String = ""
-            
+            if row >= limitedApps.count {
+                limitedTableView.reloadData()
+                return nil
+            }
             let item = limitedApps[row]
             
-            //
             if tableColumn == tableView.tableColumns[0] {
                 text = item.name
             } else if tableColumn == tableView.tableColumns[1] {
@@ -152,10 +164,12 @@ extension ViewController: NSTableViewDelegate,
                 return nil
             }
             var text: String = ""
-            
+            if row >= apps.count {
+                tableView.reloadData()
+                return nil
+            }
             let item = apps[row]
             
-            // 2
             if tableColumn == tableView.tableColumns[0] {
                 text = item.name
             } else if tableColumn == tableView.tableColumns[1] {
@@ -164,7 +178,6 @@ extension ViewController: NSTableViewDelegate,
                 text = "\(item.mem)"
             }
             
-           
             cell.textField?.stringValue = text
            
             return cell

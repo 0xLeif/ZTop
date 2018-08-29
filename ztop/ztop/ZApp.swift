@@ -13,7 +13,7 @@ struct ZApp: Codable {
     let p_id: pid_t
     let cpu: Double
     let mem: Double
-    
+    var tick: Int = 0
     var isPinned: Bool = false {
         didSet {
             if oldValue {
