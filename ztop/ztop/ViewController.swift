@@ -112,7 +112,7 @@ class ViewController: NSViewController {
         if tableView.clickedRow >= 0 {
             print(tableView.clickedRow)
             let app = apps[tableView.clickedRow]
-            allApps["\(app.p_id)"]!.limit(percent: 50)
+            allApps["\(app.p_id)"]!.limit(percent: -10)
         }
     }
     
