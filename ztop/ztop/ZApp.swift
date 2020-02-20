@@ -17,7 +17,7 @@ struct ZApp: Codable {
     var isPinned: Bool = false {
         didSet {
             if oldValue {
-                print("cputhrottle \(p_id) \(0)")//.run()
+                "renice -n \(0) -p \(p_id)".run()
             }
         }
     }
@@ -25,7 +25,7 @@ struct ZApp: Codable {
         didSet {
             isPinned = limit != 0
             if limit > 0 {
-                print("cputhrottle \(p_id) \(limit)")//.run()
+                "renice -n \(limit) -p \(p_id)".run()
             }
         }
     }
